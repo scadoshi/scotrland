@@ -1,0 +1,4 @@
+ACTION=="add", SUBSYSTEM=="video4linux", ATTRS{idVendor}=="30c9", ATTRS{idProduct}=="005f", \
+    RUN+="/bin/sh -c '/usr/bin/v4l2-ctl --device=$env{DEVNAME} --set-fmt-video=width=1280,height=720,pixelformat=MJPG'"
+ACTION=="add", SUBSYSTEM=="video4linux", ATTRS{idVendor}=="30c9", ATTRS{idProduct}=="005f", \
+    RUN+="/bin/sh -c '/usr/bin/v4l2-ctl --device=$env{DEVNAME} --set-ctrl=sharpness=7'"
